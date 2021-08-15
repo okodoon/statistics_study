@@ -1,0 +1,11 @@
+# https://qiita.com/komiya_____/items/96c14485eb035701e218
+version: '3'
+services:
+  bi-study-anaconda: # 任意の名前（ディレクトリ名 + dev がコンテナ名となります）
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8888"
+    volumes:
+    - .:/workdir
